@@ -7,7 +7,8 @@
           Type_interface.mli Type_interface.ml
           Type_instance.mli Type_instance.ml
           Type_class.mli Type_class.ml
-          Object.mli Object.ml)
+          Object.mli Object.ml
+          Value_array.mli Value_array.ml)
  (deps    ../gen/gen.exe)
  (action  (run %{deps} -o %{targets})))
 
