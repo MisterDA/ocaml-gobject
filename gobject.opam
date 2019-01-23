@@ -17,5 +17,6 @@ depends: [
   "base"
   "stdio"
   "configurator"
+  "gi-glib2"
 ]
 
