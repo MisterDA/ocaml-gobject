@@ -12,8 +12,8 @@ let copy =
  *   foreign "g_value_dup_object" (ptr t_typ @-> returning (ptr Object.t_typ)) *)
 let dup_string =
   foreign "g_value_dup_string" (ptr t_typ @-> returning (string_opt))
-(* let dup_variant =
- *   foreign "g_value_dup_variant" (ptr t_typ @-> returning (ptr_opt Variant.t_typ)) *)
+let dup_variant =
+  foreign "g_value_dup_variant" (ptr t_typ @-> returning (ptr Variant.t_typ))
 let fits_pointer =
   foreign "g_value_fits_pointer" (ptr t_typ @-> returning (bool))
 let get_boolean =
@@ -55,11 +55,11 @@ let get_uint64 =
   foreign "g_value_get_uint64" (ptr t_typ @-> returning (uint64_t))
 let get_ulong =
   foreign "g_value_get_ulong" (ptr t_typ @-> returning (uint64_t))
-(* let get_variant =
- *   foreign "g_value_get_variant" (ptr t_typ @-> returning (ptr_opt Variant.t_typ)) *)
+let get_variant =
+  foreign "g_value_get_variant" (ptr t_typ @-> returning (ptr Variant.t_typ))
 (*Not implemented g_value_init type gType not implemented*)
-(* let init_from_instance =
- *   foreign "g_value_init_from_instance" (ptr t_typ @-> ptr Type_instance.t_typ @-> returning (void)) *)
+let init_from_instance =
+  foreign "g_value_init_from_instance" (ptr t_typ @-> ptr Type_instance.t_typ @-> returning (void))
 let peek_pointer =
   foreign "g_value_peek_pointer" (ptr t_typ @-> returning (ptr_opt void))
 let reset =
@@ -113,14 +113,14 @@ let set_uint64 =
   foreign "g_value_set_uint64" (ptr t_typ @-> uint64_t @-> returning (void))
 let set_ulong =
   foreign "g_value_set_ulong" (ptr t_typ @-> uint64_t @-> returning (void))
-(* let set_variant =
- *   foreign "g_value_set_variant" (ptr t_typ @-> ptr_opt Variant.t_typ @-> returning (void)) *)
+let set_variant =
+  foreign "g_value_set_variant" (ptr t_typ @-> ptr_opt Variant.t_typ @-> returning (void))
 let take_boxed =
   foreign "g_value_take_boxed" (ptr t_typ @-> ptr_opt void @-> returning (void))
 let take_string =
   foreign "g_value_take_string" (ptr t_typ @-> string_opt @-> returning (void))
-(* let take_variant =
- *   foreign "g_value_take_variant" (ptr t_typ @-> ptr_opt Variant.t_typ @-> returning (void)) *)
+let take_variant =
+  foreign "g_value_take_variant" (ptr t_typ @-> ptr_opt Variant.t_typ @-> returning (void))
 let transform =
   foreign "g_value_transform" (ptr t_typ @-> ptr t_typ @-> returning (bool))
 let unset =
