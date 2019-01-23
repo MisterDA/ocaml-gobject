@@ -19,7 +19,7 @@ let files_suffix = "Raw"
 (** Instead of generate all the data structures (and theirs related methods or
  *  constants), the idea is to choose what is needed. *)
 let data_structures =
-  ["TypeInterface"; "ParamSpec"; "Object"; "ValueArray"]
+  ["TypeInterface"; "TypeInstance"; "TypeClass"; "ParamSpec"; "Object"; "ValueArray";]
 (* @ [ "Value"; ] *)
 (* "Binding"; "Closure" *)
   

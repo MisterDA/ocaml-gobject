@@ -5,6 +5,8 @@
           Binding_flags.mli Binding_flags.ml
           Param_spec.mli Param_spec.ml
           Type_interface.mli Type_interface.ml
+          Type_instance.mli Type_instance.ml
+          Type_class.mli Type_class.ml
           Object.mli Object.ml)
  (deps    ../gen/gen.exe)
  (action  (run %{deps} -o %{targets})))
