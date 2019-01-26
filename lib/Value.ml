@@ -13,7 +13,7 @@ let copy =
 let dup_string =
   foreign "g_value_dup_string" (ptr t_typ @-> returning (string_opt))
 (* let dup_variant =
- *   foreign "g_value_dup_variant" (ptr t_typ @-> returning (ptr_opt Variant.t_typ)) *)
+ *   foreign "g_value_dup_variant" (ptr t_typ @-> returning (ptr Variant.t_typ)) *)
 let fits_pointer =
   foreign "g_value_fits_pointer" (ptr t_typ @-> returning (bool))
 let get_boolean =
@@ -56,10 +56,10 @@ let get_uint64 =
 let get_ulong =
   foreign "g_value_get_ulong" (ptr t_typ @-> returning (uint64_t))
 (* let get_variant =
- *   foreign "g_value_get_variant" (ptr t_typ @-> returning (ptr_opt Variant.t_typ)) *)
+ *   foreign "g_value_get_variant" (ptr t_typ @-> returning (ptr Variant.t_typ)) *)
 (*Not implemented g_value_init type gType not implemented*)
-(* let init_from_instance =
- *   foreign "g_value_init_from_instance" (ptr t_typ @-> ptr Type_instance.t_typ @-> returning (void)) *)
+let init_from_instance =
+  foreign "g_value_init_from_instance" (ptr t_typ @-> ptr Type_instance.t_typ @-> returning (void))
 let peek_pointer =
   foreign "g_value_peek_pointer" (ptr t_typ @-> returning (ptr_opt void))
 let reset =

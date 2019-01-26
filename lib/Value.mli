@@ -12,7 +12,7 @@ val copy :
 val dup_string :
   t structure ptr -> string option
 (* val dup_variant :
- *   t structure ptr -> Variant.t structure ptr option *)
+ *   t structure ptr -> Variant.t structure ptr *)
 val fits_pointer :
   t structure ptr -> bool
 val get_boolean :
@@ -55,10 +55,10 @@ val get_uint64 :
 val get_ulong :
   t structure ptr -> Unsigned.uint64
 (* val get_variant :
- *   t structure ptr -> Variant.t structure ptr option *)
+ *   t structure ptr -> Variant.t structure ptr *)
 (*Not implemented g_value_init type gType not implemented*)
-(* val init_from_instance :
- *   t structure ptr -> Type_instance.t structure ptr -> unit *)
+val init_from_instance :
+  t structure ptr -> Type_instance.t structure ptr -> unit
 val peek_pointer :
   t structure ptr -> unit ptr option
 val reset :
