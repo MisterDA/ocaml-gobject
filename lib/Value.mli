@@ -11,8 +11,8 @@ val copy :
  *   t structure ptr -> Object.t ptr *)
 val dup_string :
   t structure ptr -> string option
-val dup_variant :
-  t structure ptr -> Variant.t structure ptr
+(* val dup_variant :
+ *   t structure ptr -> Variant.t structure ptr *)
 val fits_pointer :
   t structure ptr -> bool
 val get_boolean :
@@ -54,8 +54,8 @@ val get_uint64 :
   t structure ptr -> Unsigned.uint64
 val get_ulong :
   t structure ptr -> Unsigned.uint64
-val get_variant :
-  t structure ptr -> Variant.t structure ptr
+(* val get_variant :
+ *   t structure ptr -> Variant.t structure ptr *)
 (*Not implemented g_value_init type gType not implemented*)
 val init_from_instance :
   t structure ptr -> Type_instance.t structure ptr -> unit
@@ -112,14 +112,14 @@ val set_uint64 :
   t structure ptr -> Unsigned.uint64 -> unit
 val set_ulong :
   t structure ptr -> Unsigned.uint64 -> unit
-val set_variant :
-  t structure ptr -> Variant.t structure ptr option -> unit
+(* val set_variant :
+ *   t structure ptr -> Variant.t structure ptr option -> unit *)
 val take_boxed :
   t structure ptr -> unit ptr option -> unit
 val take_string :
   t structure ptr -> string option -> unit
-val take_variant :
-  t structure ptr -> Variant.t structure ptr option -> unit
+(* val take_variant :
+ *   t structure ptr -> Variant.t structure ptr option -> unit *)
 val transform :
   t structure ptr -> t structure ptr -> bool
 val unset :
