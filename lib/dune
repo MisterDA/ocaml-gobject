@@ -15,15 +15,19 @@
 (rule
  (targets c_flags.sexp
             c_library_flags.sexp)
-  (deps    ../configurator/discover.exe)
+  (deps    ../config/discover.exe)
   (action  (run %{deps})))
 
 (library
  (name        GObject)
   (public_name gi-gobject)
   (libraries ctypes ctypes.foreign gi-glib2)
-  (c_names         dyn_load_constants_stubs)
-  (c_flags         (:include c_flags.sexp))
+  (foreign_stubs
+   (language c)
+   (names dyn_load_constants_stubs)
+   (flags
+    :standard
+    (:include c_flags.sexp)))
   (c_library_flags (:include c_library_flags.sexp))
   (flags -open GLib)
  )

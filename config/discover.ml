@@ -1,7 +1,7 @@
 module C = Configurator.V1
 
 let () =
-  C.main ~name:"gstreamer" (fun c ->
+  C.main ~name:"gobject" (fun c ->
       let default : C.Pkg_config.package_conf =
         { libs   = ["-lglib-2.0"]
         ; cflags = []
@@ -18,5 +18,5 @@ let () =
 
       let () = List.iter print_endline conf.cflags in
 
-      Configurator.V1.Flags.write_sexp "c_flags.sexp"         conf.cflags;
-      Configurator.V1.Flags.write_sexp "c_library_flags.sexp" conf.libs)
+      C.Flags.write_sexp "c_flags.sexp"         conf.cflags;
+      C.Flags.write_sexp "c_library_flags.sexp" conf.libs)
