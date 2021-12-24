@@ -1,0 +1,3 @@
+pin-depends: [
+  ["gi-glib2.dev" "git+https://github.com/MisterDA/OCaml-GLib2.git#617e7b63b75c082cc092c20cb6bca9a436154362"]
+]
